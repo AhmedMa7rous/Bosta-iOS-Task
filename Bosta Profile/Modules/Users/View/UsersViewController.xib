@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CoolStoryregular.ttf">
+            <string>CoolStoryregular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UsersViewController" customModule="Bosta_Profile" customModuleProvider="target">
+            <connections>
+                <outlet property="imgMeessage" destination="7wS-Di-N8L" id="u4R-wk-HHU"/>
+                <outlet property="lblMessage" destination="oMa-uQ-NmK" id="XM2-ml-QVS"/>
+                <outlet property="titleLabel" destination="BeV-99-NNe" id="cg4-fL-kVf"/>
+                <outlet property="usersTableView" destination="hw6-4K-Pqm" id="3pI-wg-1IO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMessage" destination="795-sy-MBT" id="d5m-gq-aku"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-4K-Pqm">
+                    <rect key="frame" x="30" y="138.5" width="354" height="723.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="795-sy-MBT" userLabel="Message View">
+                    <rect key="frame" x="82" y="348" width="250" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="7wS-Di-N8L">
+                            <rect key="frame" x="43" y="8" width="164" height="137"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="137" id="a9H-eg-exB"/>
+                                <constraint firstAttribute="width" constant="164" id="lCA-Ie-9jD"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting users..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMa-uQ-NmK">
+                            <rect key="frame" x="16" y="152.5" width="218" height="26"/>
+                            <fontDescription key="fontDescription" name="CoolStoryregular" family="CoolStoryregular" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="oMa-uQ-NmK" secondAttribute="trailing" constant="16" id="9Cl-Me-fPj"/>
+                        <constraint firstAttribute="height" constant="200" id="AS1-bI-xLk"/>
+                        <constraint firstItem="7wS-Di-N8L" firstAttribute="centerX" secondItem="795-sy-MBT" secondAttribute="centerX" id="PNa-ou-cBH"/>
+                        <constraint firstItem="7wS-Di-N8L" firstAttribute="top" secondItem="795-sy-MBT" secondAttribute="top" constant="8" id="aDb-hO-MC9"/>
+                        <constraint firstItem="oMa-uQ-NmK" firstAttribute="leading" secondItem="795-sy-MBT" secondAttribute="leading" constant="16" id="bF3-SF-ppm"/>
+                        <constraint firstAttribute="width" constant="250" id="bHW-mr-wqF"/>
+                        <constraint firstItem="oMa-uQ-NmK" firstAttribute="top" secondItem="7wS-Di-N8L" secondAttribute="bottom" constant="7.5" id="tQ6-1o-QK1"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose your user:" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="BeV-99-NNe">
+                    <rect key="frame" x="64.5" y="74" width="285.5" height="34.5"/>
+                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="BeV-99-NNe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="1ua-b8-pxw"/>
+                <constraint firstItem="795-sy-MBT" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AEM-oH-euD"/>
+                <constraint firstItem="hw6-4K-Pqm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="SWu-MZ-M75"/>
+                <constraint firstItem="hw6-4K-Pqm" firstAttribute="top" secondItem="BeV-99-NNe" secondAttribute="bottom" constant="30" id="UwN-7x-OGJ"/>
+                <constraint firstItem="BeV-99-NNe" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="VoI-og-G8I"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hw6-4K-Pqm" secondAttribute="trailing" constant="30" id="h6P-uZ-dcz"/>
+                <constraint firstItem="795-sy-MBT" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="i1R-n9-Atm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hw6-4K-Pqm" secondAttribute="bottom" id="mor-rg-MMK"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="84"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Loading" width="164" height="137"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

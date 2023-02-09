@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="CoolStoryregular.ttf">
+            <string>CoolStoryregular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumViewController" customModule="Bosta_Profile" customModuleProvider="target">
+            <connections>
+                <outlet property="albumCollectionView" destination="ang-Gs-P95" id="EIk-ar-6Vk"/>
+                <outlet property="imgMeessage" destination="VcA-sF-5SQ" id="qgP-qY-GwO"/>
+                <outlet property="lblMessage" destination="CjB-BU-3fZ" id="cJB-Mp-EEi"/>
+                <outlet property="photosSearchBar" destination="0JD-LP-WG9" id="oXG-X4-oNr"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewMessage" destination="Wqc-P4-r9R" id="hsD-JE-qp1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" placeholder="Search in images.." translatesAutoresizingMaskIntoConstraints="NO" id="0JD-LP-WG9">
+                    <rect key="frame" x="20" y="44" width="374" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="ang-Gs-P95">
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="yDI-Jf-Y8w">
+                        <size key="itemSize" width="138" height="138"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wqc-P4-r9R" userLabel="Message View">
+                    <rect key="frame" x="82" y="348" width="250" height="200"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Loading" translatesAutoresizingMaskIntoConstraints="NO" id="VcA-sF-5SQ">
+                            <rect key="frame" x="43" y="8" width="164" height="137"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="137" id="no5-P1-BUq"/>
+                                <constraint firstAttribute="width" constant="164" id="tUl-mE-NPl"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Getting photos..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CjB-BU-3fZ">
+                            <rect key="frame" x="16" y="152.5" width="218" height="26"/>
+                            <fontDescription key="fontDescription" name="CoolStoryregular" family="CoolStoryregular" pointSize="22"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="0Rh-Xz-tnF"/>
+                        <constraint firstItem="CjB-BU-3fZ" firstAttribute="leading" secondItem="Wqc-P4-r9R" secondAttribute="leading" constant="16" id="3jS-M9-tJw"/>
+                        <constraint firstItem="VcA-sF-5SQ" firstAttribute="centerX" secondItem="Wqc-P4-r9R" secondAttribute="centerX" id="EKA-El-wsy"/>
+                        <constraint firstAttribute="width" constant="250" id="Sdh-tb-BHz"/>
+                        <constraint firstItem="CjB-BU-3fZ" firstAttribute="top" secondItem="VcA-sF-5SQ" secondAttribute="bottom" constant="7.5" id="YNS-Mc-jmd"/>
+                        <constraint firstItem="VcA-sF-5SQ" firstAttribute="top" secondItem="Wqc-P4-r9R" secondAttribute="top" constant="8" id="eYr-rC-nT2"/>
+                        <constraint firstAttribute="trailing" secondItem="CjB-BU-3fZ" secondAttribute="trailing" constant="16" id="oGA-wT-mOv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ang-Gs-P95" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="AkE-Ij-wKl"/>
+                <constraint firstItem="0JD-LP-WG9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="FSD-2h-t8j"/>
+                <constraint firstItem="Wqc-P4-r9R" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="JMQ-e6-WTo"/>
+                <constraint firstItem="0JD-LP-WG9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="JzD-hf-6aN"/>
+                <constraint firstItem="Wqc-P4-r9R" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Kwk-rD-qEp"/>
+                <constraint firstItem="ang-Gs-P95" firstAttribute="top" secondItem="0JD-LP-WG9" secondAttribute="bottom" id="Tpa-gi-Eup"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ang-Gs-P95" secondAttribute="trailing" id="VXJ-Fg-iBU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0JD-LP-WG9" secondAttribute="trailing" constant="20" id="c1K-Cl-Bpk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ang-Gs-P95" secondAttribute="bottom" id="lfm-1z-bIO"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="53.571428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Loading" width="164" height="137"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
